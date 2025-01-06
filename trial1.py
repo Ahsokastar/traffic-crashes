@@ -46,7 +46,7 @@ crash_data['CRASH_DATE'] = pd.to_datetime(crash_data['CRASH_DATE'], format='%m/%
 
 
 years = crash_data['CRASH_DATE'].dt.year.unique()
-m = folium.Map(location=(41.8781, -87.6298), tiles = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', attr = 'mine')
+m = folium.Map(location=(41.8781, -87.6298), tiles = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attr = 'open-street-map')
 for year in years:
     year_data = crash_data[crash_data['CRASH_DATE'].dt.year == year]
     lat_long = year_data[['LATITUDE','LONGITUDE']].dropna().values.tolist()
