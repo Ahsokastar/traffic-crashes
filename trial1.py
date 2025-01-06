@@ -28,7 +28,7 @@ def load_data():
     api.dataset_download_files(dataset_identifier, path=DATA_DIR, unzip=True)
 
     
-    crash_path = os.path.join(DATA_DIR, 'red-light-camera-violations.csv')
+    crash_path = os.path.join(DATA_DIR, 'Traffic_Crashes_-_Crashes.csv')
 
    
     crash_pd = pd.read_csv(crash_path)
